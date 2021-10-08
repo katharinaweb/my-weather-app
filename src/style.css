@@ -1,0 +1,120 @@
+body {
+  background-color: #f6f6f6;
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+h1 {
+  font-size: 9pt;
+  text-align: center;
+  line-height: 80%;
+  margin-top: 20px;
+}
+
+hr {
+  margin: 0;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: lightgrey;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0b5ed7;
+}
+
+.container {
+  background: #fff;
+  max-width: 500px;
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 30px 30px;
+}
+
+.currentCity {
+  font-family: "Arizonia", cursive;
+  margin-bottom: 0;
+}
+
+.today {
+  display: block;
+  margin: 10px auto;
+}
+
+.currentMessage {
+  font-family: "Arizonia", cursive;
+  font-size: 20pt;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 110%;
+}
+
+.currentWeather {
+  font-size: 6pt;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.currentTemperature {
+  font-size: 15pt;
+  line-height: 130%;
+}
+
+.unit {
+  font-size: 8pt;
+  color: lightgrey;
+}
+
+.selected {
+  color: black;
+  pointer-events: none;
+}
+
+.selected:hover {
+  color: black;
+  cursor: default;
+}
+
+.currentDate {
+  font-size: 12px;
+  font-weight: 200;
+  font-style: italic;
+  color: lightgrey;
+}
+
+.refresh {
+  font-size: 12px;
+  font-weight: 200;
+  text-align: right;
+}
+
+.sync {
+  padding: 3px;
+}
+
+.forecast {
+  font-size: 8pt;
+  text-align: center;
+  margin: 15px 0px 15px 0px;
+}
+
+.buttons {
+  font-size: 9pt;
+}
+
+.selectCity {
+  font-size: 9pt;
+  font-style: italic;
+  margin-bottom: 10px;
+}
