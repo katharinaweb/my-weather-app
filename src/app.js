@@ -61,7 +61,7 @@ for (let i = 0; i < 5; i++) {
   futureMonths[i] = months[currentDate.getMonth()];
   futureMonths[i] = `0${futureMonths[i]}`.slice(-2);
   let future = document.querySelector(ids[i]);
-  future.innerHTML = `${futureDays[i]} </ br> ${futureDates[i]}.${futureMonths[i]}`;
+  future.innerHTML = `${futureDays[i]} </ br> ${futureDates[i]}.${futureMonths[i]}.`;
 }
 
 // Current city
@@ -122,6 +122,17 @@ let pictures = [
   "clouds",
 ];
 
+function checkUnit() {
+  let currentUnit = document
+    .getElementsByClassName("selected")
+    .item(0).innerHTML;
+  if (currentUnit === "°C") {
+    unit = "metric";
+  } else if (currentUnit === "°F") {
+    unit = "imperial";
+  }
+}
+
 function showTemperature(response) {
   let location = response.data.name;
   let temperatureCurrent = Math.round(response.data.main.temp);
@@ -171,6 +182,7 @@ function defaultLocation() {
 
 function changeLocation(event) {
   event.preventDefault();
+  checkUnit();
   let searchCity = document.querySelector("#search-city");
   if (searchCity.value !== "") {
     axios
@@ -192,11 +204,14 @@ function showPosition(position) {
 }
 
 function currentLocation() {
+  checkUnit();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
 function randomLocation(event) {
   event.preventDefault();
+  checkUnit();
+
   let cities = [
     "Yamoussoukro",
     "Abu Dhabi",
@@ -447,8 +462,8 @@ function randomLocation(event) {
 let apiRoot = "https://api.openweathermap.org/";
 let apiPath = "data/2.5/weather";
 let apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
-let unit = "metric";
 let defaultCity = "Vienna";
+let unit = "metric";
 
 defaultLocation();
 
