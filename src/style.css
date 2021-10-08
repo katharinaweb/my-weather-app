@@ -45,6 +45,7 @@ a:hover {
 .currentCity {
   font-family: "Arizonia", cursive;
   margin-bottom: 0;
+  font-size: 30pt;
 }
 
 .today {

@@ -125,7 +125,7 @@ let pictures = [
 function showTemperature(response) {
   let location = response.data.name;
   let temperatureCurrent = Math.round(response.data.main.temp);
-  let temperatureMin = Math.round(response.data.main.temp_min);
+  // let temperatureMin = Math.round(response.data.main.temp_min);
   // let temperatureMax = Math.round(response.data.main.temp_max);
   // let precipitation = "";
   let humidity = response.data.main.humidity;
@@ -134,13 +134,13 @@ function showTemperature(response) {
   let description = response.data.weather[0].description;
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = location;
-  if (location.length > 6) {
-    currentCity.style.fontSize = `${
-      (1 / location.length) * 300 + 0.5 * location.length
-    }pt`;
-  } else {
-    currentCity.style.fontSize = "50pt";
-  }
+  // if (location.length > 6) {
+  //   currentCity.style.fontSize = `${
+  //     (1 / location.length) * 300 + 0.5 * location.length
+  //  }pt`;
+  // } else {
+  //   currentCity.style.fontSize = "50pt";
+  // }
   // let tempMin = document.querySelector("#today-min");
   // tempMin.innerHTML = temperatureMin;
   let tempMax = document.querySelector("#today-max");
@@ -343,7 +343,6 @@ function randomLocation(event) {
     "Naypyidaw",
     "N'Djamena",
     "New Delhi",
-    "Ngerulmud",
     "Niamey",
     "Nicosia",
     "Nouakchott",
