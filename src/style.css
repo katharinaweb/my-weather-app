@@ -118,3 +118,12 @@ a:hover {
   font-style: italic;
   margin-bottom: 10px;
 }
+
+.origin {
+  font-size: 6.5pt;
+  text-align: center;
+}
+
+.bottom-link {
+  color: #0b5ed7;
+}
